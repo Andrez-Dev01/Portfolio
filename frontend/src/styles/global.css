@@ -5,10 +5,16 @@
   --border-subtle: #2a2f38;
   --text-primary: #f0f2f5;
   --text-secondary: #8b949e;
+  --text-muted: #6e7681;
   --accent: #58a6ff;
   --accent-cyan: #00d4ff;
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --content-max-width: 72rem;
+  --page-padding: 1.5rem;
+  --section-padding: 4rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
 }
 
 *,
@@ -29,4 +35,16 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

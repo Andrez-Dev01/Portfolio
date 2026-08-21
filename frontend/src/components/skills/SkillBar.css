@@ -1,0 +1,41 @@
+.skill-bar {
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, rgba(88, 166, 255, 0.04) 0%, transparent 100%);
+}
+
+.skill-bar__track {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0.875rem var(--page-padding);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
+}
+
+.skill-bar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-bar__dot {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.skill-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.skill-bar__item:hover .skill-bar__label {
+  color: var(--accent-cyan);
+}

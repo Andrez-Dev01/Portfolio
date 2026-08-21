@@ -1,11 +1,15 @@
 .app {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.app__status {
-  color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+.app__main {
+  flex: 1;
+}
+
+.app__container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
 }

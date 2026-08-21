@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" fill="none">
+  <rect width="640" height="360" fill="#12151a"/>
+  <rect x="1" y="1" width="638" height="358" stroke="#2a2f38" stroke-width="2"/>
+  <circle cx="320" cy="160" r="48" stroke="#58a6ff" stroke-width="2" opacity="0.6"/>
+  <path d="M280 200 L320 120 L360 200" stroke="#00d4ff" stroke-width="2" fill="none"/>
+  <text x="320" y="280" fill="#8b949e" font-family="monospace" font-size="14" text-anchor="middle">NEXUS ANALYTICS</text>
+</svg>
