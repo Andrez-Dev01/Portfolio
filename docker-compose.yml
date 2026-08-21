@@ -1,0 +1,27 @@
+# Run the full portfolio stack locally:
+#   docker compose up --build
+#
+# Frontend: http://localhost:5173
+# Backend API: http://localhost:8080/api/portfolio
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - CORS_ORIGIN=http://localhost:5173
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8080
+    depends_on:
+      - backend
