@@ -1,0 +1,26 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0.5rem 0 0;
+}
+
+.notice {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  background: var(--surface-elevated);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.error {
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #fca5a5;
+}

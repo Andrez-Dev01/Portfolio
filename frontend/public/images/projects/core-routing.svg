@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0B1220"/>
+  <circle cx="600" cy="337" r="90" fill="#111827" stroke="#22C55E" stroke-width="3"/>
+  <circle cx="320" cy="220" r="55" fill="#111827" stroke="#4ADE80" stroke-width="2"/>
+  <circle cx="880" cy="220" r="55" fill="#111827" stroke="#4ADE80" stroke-width="2"/>
+  <circle cx="320" cy="480" r="55" fill="#111827" stroke="#4ADE80" stroke-width="2"/>
+  <circle cx="880" cy="480" r="55" fill="#111827" stroke="#4ADE80" stroke-width="2"/>
+  <line x1="375" y1="250" x2="525" y2="310" stroke="#22C55E" stroke-width="2"/>
+  <line x1="675" y1="310" x2="825" y2="250" stroke="#22C55E" stroke-width="2"/>
+  <line x1="375" y1="450" x2="525" y2="380" stroke="#22C55E" stroke-width="2"/>
+  <line x1="675" y1="380" x2="825" y2="450" stroke="#22C55E" stroke-width="2"/>
+  <text x="80" y="80" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Core Routing Engine</text>
+  <text x="80" y="580" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="18">CUSTOMIZE: Replace with your project screenshot</text>
+</svg>

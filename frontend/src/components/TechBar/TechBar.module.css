@@ -1,0 +1,40 @@
+.bar {
+  padding: 1rem 0 2.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bar::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: max-content;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.dot {
+  color: var(--text-faint);
+  margin-left: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .track {
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+}
