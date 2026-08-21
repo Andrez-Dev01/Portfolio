@@ -1,4 +1,5 @@
 import './Footer.css';
+import './Footer.responsive.css';
 
 /**
  * Site footer with social links from the original portfolio.

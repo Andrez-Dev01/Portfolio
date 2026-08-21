@@ -1,4 +1,5 @@
 import './Header.css';
+import './Header.responsive.css';
 
 /**
  * Minimal top navigation.

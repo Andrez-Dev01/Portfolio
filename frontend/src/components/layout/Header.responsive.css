@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .site-header__links {
+    display: none;
+  }
+
+  .site-header__nav {
+    padding: 0.875rem var(--page-padding);
+  }
+
+  .site-header__contact {
+    font-size: 0.6875rem;
+    padding: 0.4375rem 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header__name {
+    font-size: 0.875rem;
+  }
+
+  .site-header__logo {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
