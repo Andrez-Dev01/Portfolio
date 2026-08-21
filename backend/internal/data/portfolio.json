@@ -1,0 +1,51 @@
+{
+  "owner": {
+    "name": "Andrez",
+    "title": "Software Engineer",
+    "bio": "Computer Science student building scalable systems with modern tooling.",
+    "email": "andrez.code@gmail.com"
+  },
+  "techStack": [
+    "Node.js",
+    "Go",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "TypeScript",
+    "React.js"
+  ],
+  "featuredProjects": [
+    {
+      "id": "nexus-analytics",
+      "title": "Nexus Analytics",
+      "description": "Real-time data visualization platform processing millions of events per second with sub-100ms latency across distributed GraphQL subscriptions.",
+      "tags": ["React", "GraphQL"],
+      "imageUrl": "/images/nexus-analytics.jpg",
+      "projectUrl": "https://example.com/nexus-analytics",
+      "repoUrl": "https://github.com/Andrez-Dev01/nexus-analytics"
+    },
+    {
+      "id": "core-routing-engine",
+      "title": "Core Routing Engine",
+      "description": "High-throughput microservices routing layer built in Go with gRPC, circuit breakers, and observability for mission-critical traffic paths.",
+      "tags": ["Go", "gRPC"],
+      "imageUrl": "/images/core-routing-engine.jpg",
+      "projectUrl": "https://example.com/core-routing",
+      "repoUrl": "https://github.com/Andrez-Dev01/core-routing-engine"
+    }
+  ],
+  "archiveUrl": "/archive",
+  "socialLinks": [
+    {
+      "platform": "github",
+      "url": "https://github.com/Andrez-Dev01",
+      "label": "GitHub"
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/your-profile",
+      "label": "LinkedIn"
+    }
+  ]
+}
