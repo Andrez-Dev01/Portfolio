@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="pcb-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2818"/>
+      <stop offset="100%" style="stop-color:#1a3a2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#pcb-bg)"/>
+  <!-- Circuit board traces -->
+  <g stroke="#2d5a3d" stroke-width="2" fill="none">
+    <path d="M100,250 H300 V150 H500 V250 H700"/>
+    <path d="M100,250 V350 H250 V450 H550"/>
+    <path d="M500,150 V80 H650"/>
+    <path d="M300,150 V80 H150"/>
+  </g>
+  <!-- Chips -->
+  <rect x="270" y="230" width="60" height="40" rx="2" fill="#1a4a2e" stroke="#4ade80" stroke-width="1"/>
+  <rect x="470" y="130" width="50" height="35" rx="2" fill="#1a4a2e" stroke="#4ade80" stroke-width="1"/>
+  <rect x="130" y="330" width="45" height="30" rx="2" fill="#1a4a2e" stroke="#4ade80" stroke-width="1"/>
+  <rect x="580" y="370" width="55" height="38" rx="2" fill="#1a4a2e" stroke="#4ade80" stroke-width="1"/>
+  <!-- Connection nodes -->
+  <circle cx="100" cy="250" r="6" fill="#4ade80"/>
+  <circle cx="300" cy="150" r="5" fill="#4ade80" opacity="0.8"/>
+  <circle cx="500" cy="250" r="6" fill="#4ade80"/>
+  <circle cx="700" cy="250" r="5" fill="#4ade80" opacity="0.8"/>
+  <circle cx="250" cy="450" r="5" fill="#4ade80" opacity="0.7"/>
+  <!-- Grid pattern -->
+  <g stroke="#1a3a2a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+  </g>
+</svg>

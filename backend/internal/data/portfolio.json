@@ -21,7 +21,7 @@
       "title": "Nexus Analytics",
       "description": "Real-time data visualization platform processing millions of events per second with sub-100ms latency across distributed GraphQL subscriptions.",
       "tags": ["React", "GraphQL"],
-      "imageUrl": "/images/nexus-analytics.jpg",
+      "imageUrl": "/images/nexus-analytics.svg",
       "projectUrl": "https://example.com/nexus-analytics",
       "repoUrl": "https://github.com/Andrez-Dev01/nexus-analytics"
     },
@@ -30,7 +30,7 @@
       "title": "Core Routing Engine",
       "description": "High-throughput microservices routing layer built in Go with gRPC, circuit breakers, and observability for mission-critical traffic paths.",
       "tags": ["Go", "gRPC"],
-      "imageUrl": "/images/core-routing-engine.jpg",
+      "imageUrl": "/images/core-routing-engine.svg",
       "projectUrl": "https://example.com/core-routing",
       "repoUrl": "https://github.com/Andrez-Dev01/core-routing-engine"
     }
