@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#111827"/>
+  <rect x="80" y="120" width="1040" height="435" rx="16" fill="#1F2937" stroke="#374151"/>
+  <path d="M140 420 L320 300 L520 360 L760 220 L980 340 L1080 280" stroke="#60A5FA" stroke-width="4" fill="none"/>
+  <circle cx="320" cy="300" r="8" fill="#93C5FD"/>
+  <circle cx="520" cy="360" r="8" fill="#93C5FD"/>
+  <circle cx="760" cy="220" r="8" fill="#93C5FD"/>
+  <text x="80" y="80" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Nexus Analytics</text>
+  <text x="80" y="580" fill="#9CA3AF" font-family="Inter, Arial, sans-serif" font-size="18">CUSTOMIZE: Replace with your project screenshot</text>
+</svg>
