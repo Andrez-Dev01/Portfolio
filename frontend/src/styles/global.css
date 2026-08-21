@@ -1,0 +1,32 @@
+:root {
+  --bg-primary: #0b0d10;
+  --bg-secondary: #12151a;
+  --bg-card: #161b22;
+  --border-subtle: #2a2f38;
+  --text-primary: #f0f2f5;
+  --text-secondary: #8b949e;
+  --accent: #58a6ff;
+  --accent-cyan: #00d4ff;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
