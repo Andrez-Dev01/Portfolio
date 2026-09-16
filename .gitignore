@@ -1,0 +1,23 @@
+# Secrets and local env (never commit real values)
+.env
+.env.*
+!.env.example
+
+# Contact messages / local data from Go backend
+data/
+*.jsonl
+
+# Go build artifacts
+bin/
+dist/
+*.exe
+*.test
+*.out
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.log

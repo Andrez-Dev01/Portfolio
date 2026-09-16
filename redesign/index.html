@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrez Web Developer</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#562c07",
+            "outline-variant": "#c5c6cb",
+            "on-primary-container": "#9ba0a7",
+            "on-secondary-fixed": "#171c22",
+            "inverse-surface": "#333030",
+            "background": "#fff8f7",
+            "on-secondary-fixed-variant": "#42474d",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f6efef",
+            "inverse-primary": "#c2c7ce",
+            "surface": "#fff8f7",
+            "on-surface-variant": "#44474b",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#ede7e6",
+            "on-error": "#ffffff",
+            "secondary": "#5a5f65",
+            "on-secondary-container": "#5e636a",
+            "on-tertiary-fixed-variant": "#693b16",
+            "surface-dim": "#dfd8d8",
+            "on-tertiary-container": "#d19266",
+            "secondary-fixed": "#dee3ea",
+            "primary": "#1d2227",
+            "error": "#ba1a1a",
+            "surface-tint": "#5a5f65",
+            "on-primary-fixed-variant": "#42474d",
+            "tertiary": "#391900",
+            "surface-container": "#f3ecec",
+            "secondary-container": "#dbe0e8",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#c2c7ce",
+            "surface-container-highest": "#e8e1e1",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#fcb888",
+            "on-background": "#1d1b1b",
+            "primary-container": "#32373d",
+            "on-primary-fixed": "#171c22",
+            "primary-fixed": "#dee3ea",
+            "on-surface": "#1d1b1b",
+            "tertiary-fixed": "#ffdcc5",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e8e1e1",
+            "secondary-fixed-dim": "#c2c7ce",
+            "surface-bright": "#fff8f7",
+            "surface-container-low": "#f9f2f2",
+            "outline": "#75777b",
+            "on-tertiary-fixed": "#301400",
+            "error-container": "#ffdad6"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            xs: "4px",
+            base: "8px",
+            xl: "32px",
+            sm: "8px",
+            md: "16px",
+            lg: "24px",
+            margin: "24px",
+            gutter: "16px"
+          },
+          fontFamily: {
+            "headline-lg": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-md": ["Inter"]
+          },
+          fontSize: {
+            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-primary font-body-md text-on-primary">
+
+  <button class="hidden md:flex fixed top-margin right-margin z-[60] w-12 h-12 rounded-full bg-primary-container border border-white/10 shadow-lg items-center justify-center hover:bg-tertiary-fixed/10 transition-colors" id="nav-trigger" type="button" aria-label="Open navigation">
+    <span class="material-symbols-outlined text-on-primary" id="nav-icon">menu</span>
+  </button>
+
+  <nav class="hidden md:block fixed top-margin right-margin z-[55] mt-16 bg-primary-container/80 backdrop-blur-xl border border-white/10 rounded-2xl p-lg shadow-2xl opacity-0 invisible translate-y-[-10px] transition-all duration-300 min-w-[200px]" id="bubble-nav">
+    <div class="flex flex-col gap-md">
+      <a class="text-body-lg font-headline-md text-on-primary hover:text-tertiary-fixed transition-colors" href="#home">Home</a>
+      <a class="text-body-lg font-headline-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#about">About</a>
+      <a class="text-body-lg font-headline-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#projects">Portfolio</a>
+      <a class="text-body-lg font-headline-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#contact-section">Contact</a>
+    </div>
+  </nav>
+
+  <a class="hidden md:flex fixed bottom-margin right-margin z-50 bg-tertiary-fixed text-on-tertiary-fixed px-lg py-md rounded-full font-headline-md text-headline-md shadow-[0_4px_12px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform items-center gap-sm" href="#contact-section" id="fab-contact" style="transition: 0.3s; opacity: 0; pointer-events: none; transform: scale(0.8);">
+    <span class="material-symbols-outlined text-[20px]">mail</span>
+    Contact Me
+  </a>
+
+  <main class="w-full pt-16 pb-mobile-nav">
+    <div class="flex flex-col w-full">
+
+      <section class="relative px-margin py-xl overflow-hidden fade-in-section is-visible" id="home">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-xl items-start lg:items-end">
+          <div class="lg:col-span-7 flex flex-col gap-md lg:gap-lg order-1">
+            <div class="flex items-center justify-between flex-wrap gap-sm">
+              <div class="flex items-center gap-sm">
+                <span class="w-12 h-[1px] bg-tertiary-fixed hidden sm:block"></span>
+                <span class="font-label-md text-label-md text-tertiary-fixed tracking-widest uppercase">Software Developer</span>
+              </div>
+              <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-tertiary-container lg:hidden">
+                <span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+                <span class="font-label-md text-label-md text-tertiary-fixed uppercase">Back in school 2024</span>
+              </div>
+            </div>
+            <h1 class="font-headline-lg text-[clamp(32px,7vw,80px)] leading-[0.95] tracking-tighter text-on-primary">
+              <span class="italic text-tertiary-fixed">Andrez De La Torre</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-primary-container max-w-xl">
+              I am a student at Modesto Junior College pursuing my Computer Science degree and Programming Specialist Certification.
+            </p>
+            <div class="hidden lg:flex gap-md mt-md flex-wrap">
+              <a class="bg-tertiary-fixed text-on-tertiary-fixed px-lg py-md font-label-md text-label-md flex items-center gap-sm hover:translate-x-1 transition-transform rounded-lg" href="#projects">
+                <span class="material-symbols-outlined text-[18px]">folder_open</span>
+                VIEW PORTFOLIO
+              </a>
+              <a class="bg-primary-container text-on-primary px-lg py-md font-label-md text-label-md border border-white/10 hover:border-tertiary-fixed transition-all rounded-lg" href="#about">
+                ABOUT ME
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative group order-2 w-full max-w-md mx-auto lg:max-w-none lg:mx-0">
+            <div class="hero-media bg-primary-container shadow-xl border border-white/5">
+              <img class="w-full h-full object-cover object-top opacity-90" alt="Andrez header portrait" src="assets/header-image.png">
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent lg:hidden"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-sm lg:hidden">
+                <div class="bg-primary-container/90 backdrop-blur-md p-sm rounded-lg border-l-4 border-tertiary-fixed">
+                  <div class="font-headline-md text-body-lg text-on-primary">20+ YRS</div>
+                  <div class="font-label-md text-[10px] text-on-primary-container uppercase tracking-widest">Percussion &amp; WGI</div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg:block absolute -bottom-6 -left-6 bg-primary-container p-lg rounded-lg shadow-lg border-l-4 border-tertiary-fixed">
+              <div class="font-headline-md text-headline-md text-on-primary">20+ YRS</div>
+              <div class="font-label-md text-label-md text-on-primary-container uppercase tracking-widest">Percussion &amp; WGI</div>
+            </div>
+            <div class="hidden lg:block absolute top-10 -right-4 bg-tertiary-container p-md rounded-lg shadow-lg rotate-3">
+              <div class="flex items-center gap-xs">
+                <span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-pulse"></span>
+                <span class="font-label-md text-label-md text-tertiary-fixed">BACK IN SCHOOL 2024</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-sm mt-md lg:hidden">
+              <a class="w-full flex items-center justify-center gap-sm bg-tertiary-fixed text-on-tertiary-fixed px-lg py-md font-label-md text-label-md rounded-xl" href="#projects">
+                <span class="material-symbols-outlined text-[18px]">folder_open</span>
+                VIEW PORTFOLIO
+              </a>
+              <a class="w-full flex items-center justify-center gap-sm bg-primary-container text-on-primary px-lg py-md font-label-md text-label-md border border-white/10 rounded-xl" href="#about">
+                ABOUT ME
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-margin py-xl bg-primary fade-in-section is-visible" id="about">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex justify-between items-end mb-xl gap-md flex-wrap">
+            <div class="flex flex-col gap-xs">
+              <h2 class="font-headline-md text-headline-md text-on-primary">About Me</h2>
+              <p class="font-body-md text-body-md text-on-primary-container">Background, coursework, and the stack I build with.</p>
+            </div>
+            <a class="font-label-md text-label-md text-tertiary-fixed flex items-center gap-xs hover:underline" href="#projects">
+              VIEW PORTFOLIO <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-md items-stretch">
+            <div class="md:col-span-4 lg:col-span-6 lg:row-span-2 bg-primary-container rounded-xl overflow-hidden relative group border border-white/5 flex flex-col">
+              <div class="featured-media bg-primary-container">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-transparent z-10"></div>
+                <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" alt="Pokemon Card API project" src="assets/pokeapi.png">
+                <div class="absolute bottom-0 left-0 p-md sm:p-lg z-20 w-full">
+                  <div class="flex gap-sm mb-sm flex-wrap">
+                    <span class="px-sm py-xs bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-[10px] rounded">FEATURED</span>
+                    <span class="px-sm py-xs bg-white/10 text-on-primary font-label-md text-[10px] rounded uppercase">Chrome Extension</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-on-primary mb-xs">Pokemon Card API</h3>
+                  <p class="font-body-md text-body-md text-on-primary-container line-clamp-2 sm:line-clamp-3">Using the Pokemon API I created an extension that displays randomly selected Pokemon cards. Download the folder and load it as a browser extension.</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col justify-between min-h-[140px]">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-tertiary-fixed">school</span>
+                <span class="text-label-md font-label-md text-on-primary-container">COURSEWORK</span>
+              </div>
+              <div>
+                <div class="text-[36px] sm:text-[48px] font-headline-lg text-on-primary leading-none mb-xs tabular-nums" id="uptime-counter">7<span class="text-[24px] text-tertiary-fixed">+</span></div>
+                <div class="font-body-md text-body-md text-on-primary-container">CS Courses Completed</div>
+              </div>
+              <div class="w-full h-1 bg-white/10 mt-md rounded-full overflow-hidden">
+                <div class="h-full bg-tertiary-fixed w-[85%]"></div>
+              </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col justify-between">
+              <div class="flex justify-between items-start">
+                <span class="material-symbols-outlined text-tertiary-fixed">music_note</span>
+                <span class="text-label-md font-label-md text-on-primary-container">BACKGROUND</span>
+              </div>
+              <div>
+                <div class="text-[36px] sm:text-[48px] font-headline-lg text-on-primary leading-none mb-xs tabular-nums">20<span class="text-[24px] text-tertiary-fixed">+</span></div>
+                <div class="font-body-md text-body-md text-on-primary-container">Years Percussion &amp; WGI</div>
+              </div>
+              <div class="flex gap-1 mt-md">
+                <div class="h-4 w-1 bg-tertiary-fixed/20 rounded-full"></div>
+                <div class="h-6 w-1 bg-tertiary-fixed/40 rounded-full"></div>
+                <div class="h-8 w-1 bg-tertiary-fixed/60 rounded-full"></div>
+                <div class="h-5 w-1 bg-tertiary-fixed/80 rounded-full"></div>
+                <div class="h-10 w-1 bg-tertiary-fixed rounded-full"></div>
+                <div class="h-7 w-1 bg-tertiary-fixed/70 rounded-full"></div>
+                <div class="h-4 w-1 bg-tertiary-fixed/40 rounded-full"></div>
+              </div>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-primary-container border border-white/5 p-sm rounded-xl group">
+              <a class="block" href="assets/Pokemon-Extension-Project.zip" download>
+                <div class="aspect-video bg-surface-dim rounded-lg mb-sm overflow-hidden relative">
+                  <img class="w-full h-full object-cover" alt="Download Pokemon Extension" src="assets/pokeapi.png">
+                  <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/50 transition-colors flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white scale-0 group-hover:scale-100 transition-transform text-[40px]">download</span>
+                  </div>
+                </div>
+                <h4 class="font-label-md text-label-md text-on-primary px-xs">Download Chrome Extension ZIP</h4>
+              </a>
+            </div>
+            <div class="md:col-span-2 lg:col-span-3 bg-primary-container border border-white/5 p-lg rounded-xl text-on-primary flex flex-col gap-lg">
+              <div class="flex flex-col gap-xs">
+                <div class="font-label-md text-label-md text-on-primary-container tracking-widest uppercase">Tech Stack</div>
+                <h3 class="font-headline-md text-headline-md">What I Build With</h3>
+              </div>
+              <div class="flex flex-wrap gap-sm">
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">HTML</span>
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">CSS</span>
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">JavaScript</span>
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">UNIX / Linux</span>
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">Databases</span>
+                <span class="px-sm py-1 bg-white/5 border border-white/10 rounded-full font-label-md text-[11px] text-on-primary">Go (learning)</span>
+              </div>
+              <div class="mt-auto pt-md border-t border-white/10 flex items-center justify-between">
+                <span class="text-[10px] font-label-md uppercase text-on-primary-container">Building Fundamentals</span>
+                <span class="material-symbols-outlined text-[16px] text-tertiary-fixed">verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-margin py-xl relative bg-primary fade-in-section is-visible" id="projects">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-xl">
+          <div class="w-full md:w-1/3 flex flex-col gap-lg">
+            <h2 class="font-headline-lg text-headline-lg text-on-primary">Portfolio <br><span class="italic text-tertiary-fixed">Projects</span></h2>
+            <p class="font-body-md text-body-md text-on-primary-container">Selected work from my journey into software development — starting with browser extensions and web fundamentals.</p>
+            <div class="flex flex-col gap-md mt-md">
+              <div class="p-md bg-primary-container rounded-lg border-l-2 border-tertiary-fixed border border-white/5 border-l-tertiary-fixed">
+                <div class="text-[10px] font-label-md text-on-primary-container uppercase mb-xs">Featured Project</div>
+                <div class="text-body-md font-headline-md text-on-primary">Pokemon Card API Extension</div>
+              </div>
+              <div class="p-md bg-primary-container rounded-lg border-l-2 border-tertiary border border-white/5 border-l-tertiary">
+                <div class="text-[10px] font-label-md text-on-primary-container uppercase mb-xs">Started With</div>
+                <div class="text-body-md font-headline-md text-on-primary">Building my own PC</div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/3 grid grid-cols-1 gap-gutter">
+            <div class="group bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col md:flex-row gap-lg hover:border-tertiary-fixed transition-all">
+              <div class="md:w-1/3 w-full h-40 md:h-auto md:aspect-square rounded-lg overflow-hidden shrink-0">
+                <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90" alt="Pokemon Card API" src="assets/pokeapi.png">
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-sm mb-xs">
+                  <span class="font-label-md text-[10px] text-tertiary-fixed font-bold tracking-tighter uppercase">Project</span>
+                  <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                  <span class="font-label-md text-[10px] text-on-primary-container">HTML · CSS · JS</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-primary group-hover:text-tertiary-fixed transition-colors mb-sm">Pokemon Card API Chrome Extension</h3>
+                <p class="font-body-md text-body-md text-on-primary-container mb-md">Using the Pokemon API I created an extension that displays randomly selected Pokemon cards. Click the image to download the folder and load it as a web extension.</p>
+                <a class="flex items-center gap-sm text-tertiary-fixed font-label-md text-label-md group-hover:translate-x-2 transition-transform" href="assets/Pokemon-Extension-Project.zip" download>
+                  DOWNLOAD PROJECT <span class="material-symbols-outlined text-[16px]">download</span>
+                </a>
+              </div>
+            </div>
+            <div class="group bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col md:flex-row gap-lg hover:border-tertiary-fixed transition-all">
+              <div class="md:w-1/3 w-full h-40 md:h-auto md:aspect-square rounded-lg overflow-hidden shrink-0">
+                <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 opacity-90" alt="Andrez logo" src="assets/logo.png">
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="flex items-center gap-sm mb-xs">
+                  <span class="font-label-md text-[10px] text-tertiary-fixed font-bold tracking-tighter uppercase">About</span>
+                  <span class="w-1 h-1 rounded-full bg-white/20"></span>
+                  <span class="font-label-md text-[10px] text-on-primary-container">Path to CS</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-primary group-hover:text-tertiary-fixed transition-colors mb-sm">From Percussion to Programming</h3>
+                <p class="font-body-md text-body-md text-on-primary-container mb-md">I am a Computer Science student leveraging a 20-year background in percussion and WGI performance. My journey into tech began with building my own PC and developing a Chrome extension. I returned to school in 2024 to master the engineering fundamentals for a scalable career in software development.</p>
+                <a class="flex items-center gap-sm text-tertiary-fixed font-label-md text-label-md group-hover:translate-x-2 transition-transform" href="#about">
+                  READ ABOUT ME <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-margin py-xl bg-primary fade-in-section is-visible" id="coursework">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col gap-xs mb-xl">
+            <h2 class="font-headline-lg text-headline-lg text-on-primary">Completed Coursework</h2>
+            <p class="font-body-md text-body-md text-on-primary-container">Classes completed for CS and the Programming Specialist Certification.</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-md">
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">WD</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">Web Design &amp; Development</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">HTML, CSS, and front-end foundations.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">UX</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">Intro UNIX / Linux</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Systems, shells, and command-line workflows.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">DB</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">Database Management</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Data modeling and database fundamentals.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">P1</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">Problem Solving / Programming 1</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Core programming and problem-solving skills.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">IP</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">Introduction to Programming</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Entry point into writing software.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">IT</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">IT Support Fundamentals</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Hardware, troubleshooting, and support basics.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">CL</div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">General Computer Literacy</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">Completed</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Foundational computing skills.</p>
+            </div>
+            <div class="bg-primary-container border border-white/5 p-lg rounded-xl flex flex-col gap-md hover:border-tertiary-fixed transition-all group">
+              <div class="w-12 h-12 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-tertiary-fixed text-on-tertiary-fixed font-headline-md">
+                <img class="w-full h-full object-cover" alt="Andrez logo" src="assets/logo.jpg">
+              </div>
+              <div>
+                <h3 class="font-headline-md text-[18px] text-on-primary group-hover:text-tertiary-fixed transition-colors">MJC Computer Science</h3>
+                <span class="font-label-md text-[10px] text-on-primary-container tracking-widest uppercase">In Progress</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-primary-container mt-auto">Degree + Programming Specialist Certification.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-margin py-xl bg-primary-container border-t border-white/5 fade-in-section is-visible" id="contact-section">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl">
+          <div class="flex flex-col gap-lg">
+            <h2 class="font-headline-lg text-headline-lg text-on-primary mb-sm">Let's Connect</h2>
+            <p class="font-body-lg text-on-primary-container">Thank you for visiting. Check out my socials for more projects, or reach out with the form.</p>
+            <div class="flex flex-col gap-lg mt-md">
+              <div class="bg-primary-container border border-white/10 rounded-xl overflow-hidden shadow-2xl max-w-sm">
+                <div class="p-md flex items-center justify-between">
+                  <div class="flex items-center gap-sm">
+                    <div class="w-8 h-8 rounded-full overflow-hidden bg-tertiary-fixed flex items-center justify-center text-[10px] font-bold text-on-tertiary-fixed">
+                      <img class="w-full h-full object-cover" alt="Andrez" src="assets/logo.jpg">
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="text-label-md font-bold text-on-primary leading-none">Andrez</span>
+                      <span class="text-[10px] text-on-primary-container">Web Developer</span>
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-on-primary-container">more_horiz</span>
+                </div>
+                <div class="aspect-square overflow-hidden">
+                  <img alt="Andrez profile" class="w-full h-full object-cover" src="assets/profile.jpg">
+                </div>
+                <div class="p-md flex flex-col gap-sm">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-md">
+                      <span class="material-symbols-outlined text-on-primary">favorite</span>
+                      <span class="material-symbols-outlined text-on-primary">chat_bubble</span>
+                      <span class="material-symbols-outlined text-on-primary">send</span>
+                    </div>
+                    <span class="material-symbols-outlined text-on-primary">bookmark</span>
+                  </div>
+                  <div class="text-label-md text-on-primary">
+                    <span class="font-bold">MJC CS · Building in public</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-md pt-md border-t border-white/5">
+                <a class="flex items-center gap-xs group" href="https://www.facebook.com/profile.php?id=61572371544743&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border border-white/10 group-hover:border-tertiary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[18px] text-on-primary group-hover:text-tertiary-fixed">facebook</span>
+                  </div>
+                  <span class="text-label-md text-on-primary-container group-hover:text-tertiary-fixed transition-colors">Facebook</span>
+                </a>
+                <a class="flex items-center gap-xs group" href="https://www.instagram.com/andys_wrx?igsh=MWQ1ZGUxMzBkMA==" target="_blank" rel="noopener noreferrer">
+                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border border-white/10 group-hover:border-tertiary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[18px] text-on-primary group-hover:text-tertiary-fixed">photo_camera</span>
+                  </div>
+                  <span class="text-label-md text-on-primary-container group-hover:text-tertiary-fixed transition-colors">Instagram</span>
+                </a>
+                <a class="flex items-center gap-xs group" href="https://github.com/Andrez-Dev01" target="_blank" rel="noopener noreferrer">
+                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border border-white/10 group-hover:border-tertiary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[18px] text-on-primary group-hover:text-tertiary-fixed">code</span>
+                  </div>
+                  <span class="text-label-md text-on-primary-container group-hover:text-tertiary-fixed transition-colors">GitHub</span>
+                </a>
+                <a class="flex items-center gap-xs group" href="mailto:andrez.code@gmail.com">
+                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center border border-white/10 group-hover:border-tertiary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[18px] text-on-primary group-hover:text-tertiary-fixed">mail</span>
+                  </div>
+                  <span class="text-label-md text-on-primary-container group-hover:text-tertiary-fixed transition-colors">Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary p-xl rounded-2xl border border-white/10">
+            <h3 class="font-headline-md text-headline-md text-on-primary mb-lg">Send a Message</h3>
+            <form class="flex flex-col gap-md" id="contact-form" action="mailto:andrez.code@gmail.com" method="post" enctype="text/plain">
+              <div class="flex flex-col gap-xs">
+                <label class="font-label-md text-on-primary-container" for="name">Name</label>
+                <input class="bg-primary-container border border-white/10 rounded-lg px-md py-sm text-on-primary focus:outline-none focus:border-tertiary-fixed transition-colors" id="name" name="name" placeholder="Your name" type="text" required>
+              </div>
+              <div class="flex flex-col gap-xs">
+                <label class="font-label-md text-on-primary-container" for="email">Email</label>
+                <input class="bg-primary-container border border-white/10 rounded-lg px-md py-sm text-on-primary focus:outline-none focus:border-tertiary-fixed transition-colors" id="email" name="email" placeholder="you@example.com" type="email" required>
+              </div>
+              <div class="flex flex-col gap-xs">
+                <label class="font-label-md text-on-primary-container" for="message">Message</label>
+                <textarea class="bg-primary-container border border-white/10 rounded-lg px-md py-sm text-on-primary focus:outline-none focus:border-tertiary-fixed transition-colors resize-none" id="message" name="message" placeholder="Say hello or ask about a project" rows="4" required></textarea>
+              </div>
+              <button class="mt-md bg-tertiary-fixed text-on-tertiary-fixed py-md rounded-lg font-headline-md hover:bg-tertiary-fixed-dim transition-colors" type="submit">
+                Contact Me
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="w-full bg-primary border-t border-white/5 py-xl">
+    <div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row justify-between items-center gap-md">
+      <div class="text-label-md font-label-md text-on-primary-container">© 2026 Andrez · Web Developer · MJC Computer Science</div>
+      <div class="flex gap-md">
+        <a class="text-label-md font-label-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="https://github.com/Andrez-Dev01" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="text-label-md font-label-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="https://www.instagram.com/andys_wrx?igsh=MWQ1ZGUxMzBkMA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="text-label-md font-label-md text-on-primary-container hover:text-tertiary-fixed transition-colors" href="https://www.facebook.com/profile.php?id=61572371544743&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/metrics.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/fab.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- Mobile: Stitch-style bottom nav (layout only; desktop keeps bubble nav) -->
+  <a class="md:hidden fixed bottom-24 right-margin z-50 flex items-center justify-center w-14 h-14 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_4px_16px_rgba(0,0,0,0.35)]" href="#contact-section" aria-label="Contact">
+    <span class="material-symbols-outlined text-[24px]">chat</span>
+  </a>
+  <nav class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-primary-container/90 backdrop-blur-xl border-t border-white/10" aria-label="Mobile">
+    <div class="flex items-center justify-around h-16 px-sm">
+      <a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-sm py-xs text-tertiary-fixed" href="#home">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span class="font-label-md text-label-md mt-xs">Home</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-sm py-xs text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#about">
+        <span class="material-symbols-outlined text-[20px]">person</span>
+        <span class="font-label-md text-label-md mt-xs">About</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-sm py-xs text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#projects">
+        <span class="material-symbols-outlined text-[20px]">folder</span>
+        <span class="font-label-md text-label-md mt-xs">Work</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-sm py-xs text-on-primary-container hover:text-tertiary-fixed transition-colors" href="#contact-section">
+        <span class="material-symbols-outlined text-[20px]">mail</span>
+        <span class="font-label-md text-label-md mt-xs">Contact</span>
+      </a>
+    </div>
+  </nav>
+</body>
+</html>
